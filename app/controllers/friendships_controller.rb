@@ -17,8 +17,15 @@ class FriendshipsController < ApplicationController
     end
   end
 
-  def Accept
-    
+  def accept
+    @friend = User.find(params[:user_id])
+    if current_user.confirm_friend(@friend)
+      flash[:notice] = "You are now friends with #{@friend.name}!"
+      redirect_to user_friendships_path(current_user)
+    else
+      flash[:alert] = "Sorry, we couldn't process your request!"
+      redirect_to user_friendships_path(current_user)
+    end
   end
 
   def deny

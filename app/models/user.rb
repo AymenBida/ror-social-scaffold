@@ -15,15 +15,15 @@ class User < ApplicationRecord
   def friends
     friends_array = friendships.map { |f| f.friend if f.status == 'confirmed' }
     inverse_friends = inverse_friendships.map { |f| f.user if f.status == 'confirmed' }
-    friends_array + inverse_friends
+    (friends_array + inverse_friends).compact
   end
 
   def pending_friends
-    friendships.map { |f| f.friend if f.status == 'pending' }
+    friendships.map { |f| f.friend if f.status == 'pending' }.compact
   end
 
   def friend_requests
-    inverse_friendships.map { |f| f.user if f.status == 'pending' }
+    inverse_friendships.map { |f| f.user if f.status == 'pending' }.compact
   end
 
   def confirm_friend(user)

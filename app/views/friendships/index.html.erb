@@ -3,14 +3,22 @@
   <% @user.friend_requests.each do |friend| %>
     <div class="invitation">
       <%= friend.name %>
-      <%= link_to 'Accept friendship', user_accept_path(friend), class: 'btn btn-secondary ml-auto' %>
-      <%= link_to 'Deny', user_deny_path(friend), class: 'btn btn-danger' %>
+      <%= link_to 'Accept friendship', user_accept_path(friend), method: :post, class: 'btn btn-secondary ml-auto' %>
+      <%= link_to 'Deny', user_deny_path(friend), method: :post, class: 'btn btn-danger' %>
     </div>
   <% end %>
 </div>
 <h1>Invitations sent :</h1>
 <div class="invitations-sent">
   <% @user.pending_friends.each do |friend| %>
+    <div class="invitation">
+      <%= friend.name %>
+    </div>
+  <% end %>
+</div>
+<h1>Friends :</h1>
+<div class="invitations-sent">
+  <% @user.friends.each do |friend| %>
     <div class="invitation">
       <%= friend.name %>
     </div>
