@@ -1,0 +1,16 @@
+<h1>Pending requests</h1>
+<div class="invitations-sent">
+  <% @user.friend_requests.each do |friend| %>
+    <div class="invitation">
+      <%= friend.name %>
+    </div>
+  <% end %>
+</div>
+<h1>Invitations sent :</h1>
+<div class="invitations-sent">
+  <% @user.pending_friends.each do |friend| %>
+    <div class="invitation">
+      <%= friend.name %>
+    </div>
+  <% end %>
+</div>

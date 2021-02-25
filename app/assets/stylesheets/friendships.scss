@@ -5,12 +5,28 @@
 .btn-secondary {
   background-color: #689f38;
   color: #dcedc8;
-  padding: 4px 16px;
+  padding: 6px 16px;
   border-radius: 4px;
+  margin: 0 8px;
   font-weight: 900;
   &:hover {
     background-color: #8bc34a;
     color: white;
+  }
+}
+
+.invitations-sent {
+  margin: 20px 0;
+  padding: 0 20px;
+  border: solid gray 1px;
+  border-radius: 4px;
+  width: 75%;
+  > .invitation {
+    border-bottom: solid gray 1px;
+    padding: 20px 20px;
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 }
 
