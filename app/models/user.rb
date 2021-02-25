@@ -15,7 +15,7 @@ class User < ApplicationRecord
   def friends
     friends_array = friendships.map { |f| f.friend if f.status == 'confirmed' }
     inverse_friends = inverse_friendships.map { |f| f.user if f.status == 'confirmed' }
-    all_friends = friends_array + inverse_friends
+    friends_array + inverse_friends
   end
 
   def pending_friends
