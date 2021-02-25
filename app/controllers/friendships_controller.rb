@@ -1,4 +1,6 @@
 class FriendshipsController < ApplicationController
+  before_action :check_user!, only: [:index]
+
   def create
     @user = User.find(params[:user_id])
     @already_invited = current_user.pending_friends.select { |user| user.id == @user.id }
@@ -29,10 +31,24 @@ class FriendshipsController < ApplicationController
   end
 
   def deny
-    
+    @friend = User.find(params[:user_id])
+    if current_user.deny_friend(@friend)
+      flash[:notice] = "You just denied the invitation from #{@friend.name}!"
+      redirect_to user_friendships_path(current_user)
+    else
+      flash[:alert] = "Sorry, we couldn't process your request!"
+      redirect_to user_friendships_path(current_user)
+    end
   end
 
   def index
     @user = User.find(params[:user_id])
+  end
+
+  private
+
+  def check_user!
+    @authenticated_user = User.find(params[:user_id])
+    redirect_to user_friendships_path(current_user) unless @authenticated_user == current_user
   end
 end
