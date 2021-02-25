@@ -17,6 +17,14 @@ class FriendshipsController < ApplicationController
     end
   end
 
+  def Accept
+    
+  end
+
+  def deny
+    
+  end
+
   def index
     @user = User.find(params[:user_id])
   end

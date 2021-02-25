@@ -3,6 +3,8 @@
   <% @user.friend_requests.each do |friend| %>
     <div class="invitation">
       <%= friend.name %>
+      <%= link_to 'Accept friendship', user_accept_path(friend), class: 'btn btn-secondary ml-auto' %>
+      <%= link_to 'Deny', user_deny_path(friend), class: 'btn btn-danger' %>
     </div>
   <% end %>
 </div>
