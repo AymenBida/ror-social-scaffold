@@ -358,3 +358,11 @@ form {
     color: white !important;
   }
 }
+
+.likes {
+  color: $primary-color-dark;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0 4px;
+  cursor: default;
+}

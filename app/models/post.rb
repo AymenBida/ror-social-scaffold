@@ -5,7 +5,10 @@ class Post < ApplicationRecord
   belongs_to :user
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
-  scope :with_likes_count, -> { Post.joins(:likes).select('posts.*, COUNT(likes.id) AS likes_count').group('posts.id') }
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
+
+  def likes
+    Post.joins(:likes).where(id: self.id).count
+  end
 end
