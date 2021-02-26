@@ -48,3 +48,13 @@
 .ml-auto {
   margin-left: auto;
 }
+
+.disabled {
+  cursor: default;
+  background-color: #7c6d64;
+  color: #f3e9e2;
+  &:hover {
+    background-color: #7c6d64;
+    color: #f3e9e2;
+  }
+}

@@ -40,4 +40,13 @@ class User < ApplicationRecord
   def friend?(user)
     friends.include?(user)
   end
+
+  def request_sent?(user)
+    friendships.find { |f| (f.friend == user and f.status == 'pending') }
+  end
+
+  def request_recieved?(user)
+    inverse_friendships.find { |f| (f.user == user and f.status == 'pending') }
+  end
 end
+
