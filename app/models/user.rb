@@ -49,4 +49,3 @@ class User < ApplicationRecord
     inverse_friendships.find { |f| (f.user == user and f.status == 'pending') }
   end
 end
-

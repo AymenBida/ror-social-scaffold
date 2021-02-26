@@ -9,6 +9,6 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   def likes
-    Post.joins(:likes).where(id: self.id).count
+    Post.joins(:likes).where(id: id).count
   end
 end

@@ -14,7 +14,7 @@ RSpec.describe Friendship, type: :model do
 end
 
 RSpec.feature 'Friendships' do
-  let(:current_user) { User.create(name: 'Yukihiro Matsumoto', email: 'yukihiro@mastsumoto.com', password: 'matsumoto') }
+  let(:current_user) { User.create(name: 'Yukihiro Matsumo', email: 'yukihiro@mastsumoto.com', password: 'matsumoto') }
 
   let(:another_user) { User.create(name: 'Yubei Miyazaki', email: 'yubei@miyazaki.com', password: 'miyazaki') }
 
