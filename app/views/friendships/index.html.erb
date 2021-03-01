@@ -1,0 +1,38 @@
+<% unless @user.friend_requests.empty? %>
+  <h1>Pending requests</h1>
+  <div class="invitations-sent">
+    <% @user.friend_requests.each do |friend| %>
+      <div class="invitation">
+        <%= friend.name %>
+        <%= link_to 'Accept friendship', user_accept_path(friend), method: :post, class: 'btn btn-secondary ml-auto' %>
+        <%= link_to 'Deny', user_deny_path(friend), method: :post, class: 'btn btn-danger' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<% unless @user.pending_friends.empty? %>
+  <h1>Invitations sent :</h1>
+  <div class="invitations-sent">
+    <% @user.pending_friends.each do |friend| %>
+      <div class="invitation">
+        <%= friend.name %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<h1>Friends :</h1>
+<% if @user.friends.empty? %>
+  <div class="invitations-sent">
+    <div class="invitation">
+      <p>You don't have any friends for now.</p>
+    </div>
+  </div>
+<% else %>
+  <div class="invitations-sent">
+    <% @user.friends.each do |friend| %>
+      <div class="invitation">
+        <%= friend.name %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

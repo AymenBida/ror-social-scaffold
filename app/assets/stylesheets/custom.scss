@@ -157,7 +157,7 @@ form {
     }
 
     input[type="checkbox"] {
-      width: fit-content;
+      width: auto;
     }
   }
 
@@ -346,4 +346,24 @@ form {
   .user-section {
     width: 50%;
   }
+}
+
+.inline {
+  display: inline;
+}
+
+.username {
+  color: black !important;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+.likes {
+  color: $primary-color-dark;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0 4px;
+  cursor: default;
 }
