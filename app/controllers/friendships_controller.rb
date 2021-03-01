@@ -18,6 +18,7 @@ class FriendshipsController < ApplicationController
   def accept
     @friend = User.find(params[:user_id])
     if current_user.confirm_friend(@friend)
+      Friendship.create(user_id: current_user.id, friend_id: @friend.id, status: 'confirmed')
       flash[:notice] = "You are now friends with #{@friend.name}!"
     else
       flash[:alert] = "Sorry, we couldn't process your request!"
