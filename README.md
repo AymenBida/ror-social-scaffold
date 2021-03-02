@@ -1,6 +1,7 @@
-# Scaffold for social media app with Ruby on Rails
+# Getting in touch
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+- This project is an example for a social media web app where users can post and comment and like
+and also invite other users to a friendship and accept received invitations.
 
 ## Built With
 
@@ -9,8 +10,7 @@
 
 ## Live Demo
 
-Open [stay in touch](https://morning-ocean-43972.herokuapp.com/users/sign_in) access the application
-
+[Live demo link](https://morning-ocean-43972.herokuapp.com/users/sign_in)
 
 ## Getting Started
 
@@ -18,56 +18,33 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+Ruby: 2.7.0
+Rails: 5.2.4
+Postgres: >= 12.5
 
 ### Setup
 
-Instal gems with:
+- Clone the repository in the folder of your choice:<br> 
+`git clone https://github.com/AymenBida/ror-social-scaffold.git`
 
-```
-bundle install
-```
+- Install required gems :<br>
+`bundle install`
 
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
+- Setup the database :<br>
+`rails db:create`<br>
+`rails db:migrate`
 
 ### Usage
 
-Start server with:
+- Start server with:
+`rails server` or `rails s`
 
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
+- Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+- To run tests with RSpec :
+`rspec --format documentation`
 
 ## Authors
 
@@ -86,17 +63,19 @@ TBA
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/AymenBida/ror-social-scaffold/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
-
 ## 📝 License
 
-TBA
+Copyright 2021 Aymen Bida and Ashaka Egerega
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
