@@ -71,7 +71,16 @@ Open [stay in touch](https://morning-ocean-43972.herokuapp.com/users/sign_in) ac
 
 ## Authors
 
+👤 **Aymen Bida**
 
+- GitHub: [@AymenBida](https://github.com/AymenBida)
+- Twitter: [@AymenBida](https://twitter.com/AymenBida)
+- LinkedIn: [AymenBida](https://www.linkedin.com/in/aymenbida/)
+
+👤 **Ashaka Egerega**
+
+- GitHub: [@AshakaE](https://github.com/AshakaE)
+- LinkedIn: [AshakaE](https://www.linkedin.com/in/AshakaE/)
 
 ## 🤝 Contributing
 
