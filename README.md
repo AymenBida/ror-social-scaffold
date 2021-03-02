@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-TBA
+Open [stay in touch](https://morning-ocean-43972.herokuapp.com/users/sign_in) access the application
 
 
 ## Getting Started
@@ -67,7 +67,7 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
-Open [stay in touch](https://morning-ocean-43972.herokuapp.com/users/sign_in) access the application
+TBA
 
 ## Authors
 
