@@ -43,4 +43,15 @@ RSpec.feature 'Friendships' do
     click_on 'Accept friendship'
     expect(page).to have_content("You are now friends with #{another_user.name}!")
   end
+
+  scenario 'when a user denies an invitation to a friendship' do
+    Friendship.create(user_id: 2, friend_id: 1, status: 'pending')
+    visit '/users/sign_in'
+    fill_in 'Email', with: 'yukihiro@mastsumoto.com'
+    fill_in 'Password', with: 'matsumoto'
+    click_on 'Log in'
+    visit '/users/1/friendships'
+    click_on 'Deny'
+    expect(page).to have_content("You just denied the invitation from #{another_user.name}!")
+  end
 end
