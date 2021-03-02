@@ -13,9 +13,7 @@ class User < ApplicationRecord
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
 
   def friends
-    friends_array = friendships.map { |f| f.friend if f.status == 'confirmed' }
-    inverse_friends = inverse_friendships.map { |f| f.user if f.status == 'confirmed' }
-    (friends_array + inverse_friends).compact
+    friendships.map { |f| f.friend if f.status == 'confirmed' }.compact
   end
 
   def pending_friends
