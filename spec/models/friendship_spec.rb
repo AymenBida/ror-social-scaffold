@@ -1,3 +1,6 @@
+# rubocop:disable Metrics/BlockLength
+# rubocop:disable Layout/LineLength
+
 require 'rails_helper'
 
 RSpec.describe Friendship, type: :model do
@@ -21,7 +24,6 @@ RSpec.feature 'Friendships' do
     current_user
     another_user
   end
-
 
   scenario 'when a user gets invited to a friendship' do
     visit '/users/sign_in'
@@ -55,3 +57,6 @@ RSpec.feature 'Friendships' do
     expect(page).to have_content("You just denied the invitation from #{another_user.name}!")
   end
 end
+
+# rubocop:enable Metrics/BlockLength
+# rubocop:enable Layout/LineLength
