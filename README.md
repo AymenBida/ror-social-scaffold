@@ -24,14 +24,14 @@ Postgres: >= 12.5
 
 ### Setup
 
-- Clone the repository in the folder of your choice: 
+- Clone the repository in the folder of your choice:<br> 
 `git clone https://github.com/AymenBida/ror-social-scaffold.git`
 
-- Install required gems :
+- Install required gems :<br>
 `bundle install`
 
-- Setup the database :
-`rails db:create` 
+- Setup the database :<br>
+`rails db:create`<br>
 `rails db:migrate`
 
 ### Usage
